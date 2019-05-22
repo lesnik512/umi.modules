@@ -8,35 +8,41 @@
             <fieldgroups>
                 <group name="common" title="Свойства" visible="visible" locked="locked">
                     <field name="title" title="Поле title" visible="visible" locked="locked">
+                        <tip>Шаблон для генерации поля title</tip>
                         <type data-type="string"/>
                     </field>
                     <field name="h1" title="Поле h1" visible="visible" locked="locked">
+                        <tip>Шаблон для генерации поля h1</tip>
                         <type data-type="string"/>
                     </field>
                     <field name="meta_descriptions" title="Поле meta description" visible="visible" locked="locked">
+                        <tip>Шаблон для генерации SEO-описания страниц</tip>
                         <type data-type="string"/>
                     </field>
                     <field name="meta_keywords" title="Поле meta keywords" visible="visible" locked="locked">
+                        <tip>Шаблон для генерации ключевых слов страниц</tip>
                         <type data-type="string"/>
                     </field>
                 </group>
                 <group name="settings" title="Настройки" visible="visible" locked="locked">
                     <field name="object_type_id" title="Тип объекта" visible="visible" locked="locked">
+                        <tip>Объектный тип страниц, для которых необходимо сгенерировать данные. Обязательно к заполнению, если не выбран иерархический тип.</tip>
                         <type data-type="int"/>
                     </field>
                     <field name="hierarchy_type_id" title="Иерархический тип данных" visible="visible" locked="locked">
+                        <tip>Иерархический тип страниц, для которых необходимо сгенерировать данные. Игнорируется, если выбран объектный тип.</tip>
                         <type data-type="int"/>
                     </field>
                     <field name="autogen" title="Автогенерация при сохранении страниц" visible="visible" locked="locked">
+                        <tip>При включении данной опции страницы, при сохранении страниц, подходящих под условия, будет произведена генерация данных по данному шаблону.</tip>
                         <type data-type="boolean"/>
                     </field>
                     <field name="force" title="Принудительная генерация" visible="visible" locked="locked">
+                        <tip>При включении данной опции, ранее сгенерированные данные будут перезаписаны при повторной генерации.</tip>
                         <type data-type="boolean"/>
                     </field>
                     <field name="pages" title="Разделы сайта" visible="visible" locked="locked">
-                        <tip>
-                            Будут выбраны только страницы из указанных разделов
-                        </tip>
+                        <tip>Для генерации будут выбраны только страницы из указанных разделов</tip>
                         <type data-type="symlink" multiple="multiple" locked="locked"/>
                     </field>
                 </group>
