@@ -4,6 +4,9 @@
 		public function __construct () {
 			parent::__construct ();
 
+            $iTypeId = regedit::getInstance()->getVal("//modules/meta/imported");
+            if(!$iTypeId or $iTypeId == 0) $this->importType();
+
 			$this->loadCommonExtension();
 
 			if(cmsController::getInstance()->getCurrentMode() == "admin") {
@@ -28,6 +31,15 @@
 			$this->loadSiteExtension();
 		}
 
+        public function importType() {
+            $importer = new xmlImporter();
+            $importer->loadXmlFile(CURRENT_WORKING_DIR . '/classes/components/meta/umiDump.xml');
+            //$importer->setUpdateIgnoreMode();
+            $importer->setFilesSource(CURRENT_WORKING_DIR . '/classes/components/meta/');
+            $importer->execute();
+            regedit::getInstance()->setVal("//modules/meta/imported", 1);
+            return true;
+        }
 
 		public function getObjectEditLink($objectId, $type = false) {
 			return $this->pre_lang . "/admin/meta/edit/" . $objectId . "/";
