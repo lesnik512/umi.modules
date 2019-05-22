@@ -1,0 +1,19 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; UTF-8" />
+	<title>Untitled Document</title>
+</head>
+<body>
+	<h2>Макросы в шаблонах</h2>
+	<p><strong>%name%</strong> — название страницы.</p>
+	<p><strong>%parent_id%, %parent_id2%, %parent_id3%</strong> — id родительской страницы на 1, 2 и 3 уровня соответственно.</p>
+	<p>
+		<strong>%meta value(page_id, field_name, [lowercase, obj_field_name])%</strong> — вывод поля страницы. <br>
+		lowercase - преобразовать вывод к нижнему регистру
+		obj_field_name - название поля, если field_name - это название поля, типа выпадающий список
+	</p>
+	<p><strong>%meta random(option1, option2, option3)% или [option1|option2|option3]</strong> — случайный выбор из нескольких опций.</p>
+	<p><strong>%meta test(if, statement, [else])%</strong> — вывести statement, если выполняется условие if, иначе вывести else.</p>
+	<p><i>Также можно использовать макросы других модулей, в том числе и кастомные.</i></p>
+</body>
+</html>
