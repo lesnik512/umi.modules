@@ -39,9 +39,9 @@
 
         public function importType() {
             $importer = new xmlImporter();
-            $importer->loadXmlFile(CURRENT_WORKING_DIR . '/classes/modules/meta/umiDump.xml');
+            $importer->loadXmlFile(CURRENT_WORKING_DIR . '/classes/components/meta/umiDump.xml');
             //$importer->setUpdateIgnoreMode();
-            $importer->setFilesSource(CURRENT_WORKING_DIR . '/classes/modules/meta/');
+            $importer->setFilesSource(CURRENT_WORKING_DIR . '/classes/components/meta/');
             $importer->execute();
             regedit::getInstance()->setVal("//modules/meta/imported",1);
             return true;
