@@ -11,11 +11,3 @@ umi.meta
 ## Особенности:
 - Есть реализация под новый и старый формат расширений, т.е. поддерживает и php5 и php7
 - Поддерживаются темы админки mac и modern
-
-## umimarket:
-- команда для упаковки
-
-```
-cd developerTools/modulePacker
-php packer.php umimeta_config.php
-```
