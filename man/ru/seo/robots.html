@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; UTF-8" />
+	<title>Untitled Document</title>
+</head>
+<body>
+<h2>Закрыть сайт от индексации</h2>
+<pre>
+User-agent: *
+Disallow: /
+</pre>
+<h2>Стандартный robots.txt</h2>
+<pre>
+User-Agent: Googlebot
+%disallow_umi_pages%
+Disallow: *?
+
+User-Agent: Yandex
+Disallow: *?
+%disallow_umi_pages%
+Host: site_host
+Crawl-delay: 3
+
+User-Agent: *
+Disallow: *?
+%disallow_umi_pages%
+Sitemap: site_host/sitemap.xml
+</pre>
+<p><i>Замените site_host на хост вашего сайта</i><br>
+<i>Макрос %disallow_umi_pages% автоматически заменится на запрещенные к индексации страницы: как системные, так и выбранные пользователем с помощью стандартных средств системы.</i>
+</p>
+</body>
+</html>
